@@ -1,15 +1,20 @@
+import path from 'path';
 import express from 'express';
 
 import { addToDo, getToDosList, updateToDo, dropToDo } from './toDo.js';
-
-import { toDoDone, toDoEntry, toDosList } from './toDoViews.js';
 
 const router = express.Router();
 
 router.get('/', (_req, res) => {
 	setTimeout(() => {
-		const toDos = toDosList(getToDosList());
-		res.send(toDos);
+		const toDos = getToDosList().map(toDo => ({
+			...toDo,
+			checked: toDo.done ? 'checked' : '',
+		}));
+		res.render(path.join(process.cwd(), 'views', 'partials', 'list'), {
+			layout: false,
+			toDos,
+		});
 	}, 2000); // Artificial delay to show indicator.
 });
 
@@ -18,12 +23,20 @@ router.post('/', (req, res) => {
 		name: req.body.newToDo,
 		done: false,
 	});
-	res.send(toDoEntry(newToDo));
+	res.render(path.join(process.cwd(), 'views', 'partials', 'entry'), {
+		layout: false,
+		toDo: newToDo,
+	});
 });
 
 router.put('/:id', (req, res) => {
 	const updatedToDo = updateToDo(req.params.id, req.query.done === 'false');
-	res.send(toDoDone(updatedToDo));
+	updatedToDo.checked = updatedToDo.done ? 'checked' : '';
+
+	res.render(path.join(process.cwd(), 'views', 'partials', 'done'), {
+		layout: false,
+		toDo: updatedToDo,
+	});
 });
 
 router.delete('/:id', (req, res) => {

@@ -1,0 +1,9 @@
+<input
+	type='checkbox'
+	id='TODO_{{toDo.id}}'
+	name='{{toDo.name}}'
+	{{toDo.checked}}
+	hx-put='/todos/{{toDo.id}}?done={{toDo.done}}'
+	hx-swap='outerHTML'
+	hx-indicator='.htmx-indicator'
+/>
