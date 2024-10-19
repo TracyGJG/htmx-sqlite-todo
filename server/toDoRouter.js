@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
 
-import { addToDo, getToDosList, updateToDo, dropToDo } from './toDo.js';
+import { addToDo, getToDosList, updateToDo, dropToDo } from './toDoStore.js';
 
 const router = express.Router();
 

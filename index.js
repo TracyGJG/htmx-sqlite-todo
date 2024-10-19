@@ -3,7 +3,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { engine } from 'express-handlebars';
 
-import toDoRouter from './toDoRouter.js';
+import toDoRouter from './server/toDoRouter.js';
 
 const app = express();
 const ADDR = 'http://127.0.0.1';
@@ -25,15 +25,6 @@ app.use('/todos', toDoRouter);
 
 app.get('/', (_req, res) => {
 	res.render('main', { layout: 'index', label: '(home)' });
-});
-
-const toDo = { id: 'id', name: 'todo name', done: true };
-
-app.get('/done', (_req, res) => {
-	res.render(path.join(process.cwd(), 'views', 'partials', 'done'), {
-		layout: false,
-		toDo: { ...toDo, checked: toDo.done ? 'checked' : '' },
-	});
 });
 
 app.listen(PORT, () => {

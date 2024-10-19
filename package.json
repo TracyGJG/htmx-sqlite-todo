@@ -6,7 +6,7 @@
 	"type": "module",
 	"scripts": {
 		"start": "node --watch index.js",
-		"server": "del todos.db* & node todos_db.js"
+		"server": "del .\\database\\todos.db*  & node .\\database\\todos_db.js"
 	},
 	"author": "",
 	"license": "CC-BY-1.0",
