@@ -6,6 +6,7 @@ import { engine } from 'express-handlebars';
 import toDoRouter from './toDoRouter.js';
 
 const app = express();
+const ADDR = 'http://127.0.0.1';
 const PORT = process.env.PORT || 3456;
 
 app.set('view engine', 'hbs');
@@ -36,5 +37,5 @@ app.get('/done', (_req, res) => {
 });
 
 app.listen(PORT, () => {
-	console.log(`http://127.0.0.1:${PORT}`);
+	console.log(`${ADDR}:${PORT}`);
 });
