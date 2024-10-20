@@ -24,7 +24,7 @@ app.use(express.static('public'));
 app.use('/todos', toDoRouter);
 
 app.get('/', (_req, res) => {
-	res.render('main', { layout: 'index', label: '(home)' });
+	res.render('main', { layout: 'index' });
 });
 
 app.listen(PORT, () => {
