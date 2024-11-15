@@ -32,34 +32,36 @@ The files in the `views/partials` are used to build the main screen but also act
 block-beta
     columns 5
 
+    space
     St["Stores"]
-    space:3
+    space
     A["APIs"]
+    space
 
     space:5
 
     Sq["SQLite"]
-    space:1
+    space
     Ex["Express JS"]
-    space:1
+    space
     H["HTMX"]
 
     space:5
 
-    db[("DB")]:1
-    space:1
-    N["NodeJS"]
-    space:1
+    db[("Database")]
+    space
+    N["Node JS"]
+    space
     B["Browser"]
 
     Sq --> db
-    St --> Sq
     db --> Sq
+    St --> Sq
     Ex --> St
+    N --- Ex
     Ex --> A
     A --> Ex
-		A --> H
+    A --> H
     H --> A
-    N --- Ex
     B --> H
 ```
