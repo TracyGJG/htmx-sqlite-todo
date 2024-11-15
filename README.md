@@ -25,3 +25,41 @@ The web client issues the following API calls in response to user interaction.
 - Update - Also within each entry also has the ability to be marked as DONE, which results in the `hx-put='/todos/{{toDo.id}}?done={{toDo.done}}'` call being issued.
 
 The files in the `views/partials` are used to build the main screen but also act as individual HTMX templates to respond to API requests.
+
+## Architecture
+
+```Mermaid
+block-beta
+    columns 5
+
+    St["Stores"]
+    space:3
+    A["APIs"]
+
+    space:5
+
+    Sq["SQLite"]
+    space:1
+    Ex["Express JS"]
+    space:1
+    H["HTMX"]
+
+    space:5
+
+    db[("DB")]:1
+    space:1
+    N["NodeJS"]
+    space:1
+    B["Browser"]
+
+    Sq --> db
+    St --> Sq
+    db --> Sq
+    Ex --> St
+    Ex --> A
+    A --> Ex
+		A --> H
+    H --> A
+    N --- Ex
+    B --> H
+```

@@ -5,7 +5,7 @@ db.pragma('journal_mode = WAL');
 
 db.exec(`CREATE TABLE IF NOT EXISTS toDos (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-   	name TEXT NOT NULL,
+		name TEXT NOT NULL,
     done BOOLEAN NOT NULL
 );`);
 
