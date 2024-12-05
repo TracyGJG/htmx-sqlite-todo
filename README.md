@@ -27,8 +27,7 @@ The web client issues the following API calls in response to user interaction.
 The files in the `views/partials` are used to build the main screen but also act as individual HTMX templates to respond to API requests.
 
 ## Architecture
-
-```Mermaid
+```mermaid
 block-beta
     columns 5
 
