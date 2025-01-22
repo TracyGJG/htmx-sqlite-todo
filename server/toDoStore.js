@@ -1,6 +1,8 @@
+import path from 'path';
+
 import Database from 'better-sqlite3';
 
-const db = new Database('database/todos.db', { verbose: console.log });
+const db = new Database(path.join(process.cwd(), 'database', 'todos.db'), { verbose: console.log });
 db.pragma('journal_mode = WAL');
 
 // Database Functions
