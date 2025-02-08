@@ -6,13 +6,3 @@ function controlAddTodoButton({ target } = { target: { value: '' } }) {
 }
 
 controlAddTodoButton();
-
-{
-	const CSRF_TOKEN = document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-	console.log(`Configure CSRF Token: ${CSRF_TOKEN}`);
-
-	document.body.addEventListener('htmx:configRequest', (event) => {
-		console.log(`Adding CSRF Token to request header`);
-		event.detail.headers['X-CSRF-Token'] = CSRF_TOKEN;
-	});
-}
