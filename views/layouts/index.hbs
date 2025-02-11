@@ -1,4 +1,4 @@
-<html lang='en' hx-headers='{"csrf-token": "headers-csrf-token-here"}'>
+<html lang='en'>
 	<head>
 		<meta charset='UTF-8' />
 		<meta name='viewport' content='width=device-width, initial-scale=1.0' />
@@ -6,9 +6,10 @@
 		<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 		<script src="scripts.js" defer></script>
 		<link rel="stylesheet" href="style.css" />
+        <meta name="CSRF-TOKEN" content="DYNAMIC_CSRF_TOKEN_HERE">
 	</head>
 
-	<body>
+    <body hx-headers='js:{"X-CSRF-TOKEN": document.querySelector(`meta[name="CSRF-TOKEN"]`).content}'>
 		{{{body}}}
 	</body>
 </html>
