@@ -2,6 +2,8 @@
 
 A To-Do example based on HTMX and backed by SQLite.
 
+Supported by NodeJs, Express, Handlebars and Body Parser.
+
 ## Scripts
 
 - start: Starts the node/express server in watch mode.
@@ -27,6 +29,7 @@ The web client issues the following API calls in response to user interaction.
 The files in the `views/partials` are used to build the main screen but also act as individual HTMX templates to respond to API requests.
 
 ## Architecture
+
 ```mermaid
 block-beta
     columns 9

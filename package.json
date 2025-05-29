@@ -1,19 +1,19 @@
 {
-	"name": "htmx-lit-sqlite",
-	"version": "1.0.0",
-	"description": "A sampler of HTMX with Lit, backed by a SQLite db",
-	"main": "app.js",
-	"type": "module",
-	"scripts": {
-		"start": "node --watch app.js",
-		"server": "node ./database/todos_db.js"
-	},
-	"author": "",
-	"license": "CC-BY-1.0",
-	"dependencies": {
-		"better-sqlite3": "^11.3.0",
-		"body-parser": "^1.20.3",
-		"express": "^4.21.0",
-		"express-handlebars": "^8.0.1"
-	}
+  "name": "htmx-sqlite-todo",
+  "version": "1.0.0",
+  "description": "A sampler ToDo List using HTMX and SQLite",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --watch app.js",
+    "server": "node ./database/todos_db.js"
+  },
+  "author": "",
+  "license": "CC-BY-1.0",
+  "dependencies": {
+    "better-sqlite3": "^11.3.0",
+    "body-parser": "^1.20.3",
+    "express": "^4.21.0",
+    "express-handlebars": "^8.0.1"
+  }
 }
