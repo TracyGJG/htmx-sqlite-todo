@@ -29,38 +29,57 @@ The files in the `views/partials` are used to build the main screen but also act
 ## Architecture
 ```mermaid
 block-beta
-    columns 5
+    columns 9
 
     space
     St["Stores"]
     space
+    space
+    space
+    space
+    space
     A["APIs"]
     space
 
-    space:5
+    space:9
 
     Sq["SQLite"]
     space
+    space
+    space
     Ex["Express JS"]
+    space
+    space
     space
     H["HTMX"]
 
-    space:5
+    space
+    space
+    Hbs["handlebars"]
+    space
+    space
+    space
+    BP["body parser"]
+    space
+    space
 
     db[("Database")]
     space
+    space
+    space
     N["Node JS"]
+    space
+    space
     space
     B["Browser"]
 
-    Sq --> db
-    db --> Sq
+    Sq --- db
     St --> Sq
     Ex --> St
+    Hbs --> N
     N --- Ex
-    Ex --> A
-    A --> Ex
-    A --> H
-    H --> A
+    BP --> N
+    Ex --- A
+    A --- H
     B --> H
 ```
