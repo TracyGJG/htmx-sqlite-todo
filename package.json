@@ -8,7 +8,7 @@
     "start": "node --watch app.js",
     "server": "node ./database/todos_db.js"
   },
-  "author": "",
+  "author": "Tracy-Gregory Gilmore",
   "license": "CC-BY-1.0",
   "dependencies": {
     "better-sqlite3": "^11.3.0",

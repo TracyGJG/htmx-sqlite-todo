@@ -32,37 +32,58 @@ The files in the `views/partials` are used to build the main screen but also act
 
 ```mermaid
 block-beta
-    columns 9
+columns 14
 
-    St["Stores"]
+    St["Stores"]:2
+    space
+    R["Routers"]:2
+    space:4
+    V["Views"]:2
     space:3
-    Ex["Express JS"]
-    space:3
-    H["HTMX"]
 
-    space:2
-    R["Router"]
-    space:3
-    A["APIs"]
-    space:2
+    space:14
 
-    Sq["SQLite"]
-    space:8
+    BS["Better
+    SQLite"]:2
+    space
+    BP["body
+    parser"]:2
+    space
+    Ex["Express"]:2
+    space
+    Hbs["express-
+    handlebars"]:2
+    space
+    H["HTMX"]:2
 
-    space:2
-    Hbs["handlebars"]
-    space:3
-    BP["body parser"]
-    space:2
+    space:14
 
-    db[("Database")]
-    space:3
-    N["Node JS"]
-    space:3
-    B["Browser"]
+    Sq["SQLite"]:2
+    space
+    db[("&nbsp;&nbsp;todos db&nbsp;&nbsp;")]:2
+    space
+    N["Node"]:2
+    space
+    A["App
+    (APIs)"]:2
+    space
+    B["Browser"]:2
 
-    Sq --- db
-    St --> Sq
+    space:14
+
+    block:key:14
+        0["Key"]
+        1["Third Party"]
+        2["NPM Dependency"]
+        3["JS Library"]
+        4["Bespoke JS"]
+        5[("&nbsp;Database&nbsp;")]
+    end
+
+    Sq --> db
+    db --> Sq
+    St --> BS
+    BS -->Sq
     Ex --> R
     R --> St
     Hbs --> Ex
@@ -73,4 +94,22 @@ block-beta
     H --- A
     A --- Ex
     B --> H
+    Hbs --> V
+
+    style 1 fill:#f00,color:#fff
+    style N fill:#f00,color:#fff
+    style Sq fill:#f00,color:#fff
+    style B fill:#f00,color:#fff
+    style 2 fill:#f70,color:#fff
+    style BS fill:#f70,color:#fff
+    style BP fill:#f70,color:#fff
+    style Hbs fill:#f70,color:#fff
+    style Ex fill:#f70,color:#fff
+    style 3 fill:#ff0
+    style H fill:#ff0
+    style 4 fill:#0f0
+    style St fill:#0f0
+    style R fill:#0f0
+    style V fill:#0f0
+    style A fill:#0f0
 ```
