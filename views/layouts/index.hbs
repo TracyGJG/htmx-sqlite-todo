@@ -3,14 +3,11 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='icon' href='/favicon.ico' type='image/png' />
+    <link rel='stylesheet' href='style.css' />
     <title>HTMX and SqLite demo</title>
     <script src='https://unpkg.com/htmx.org@2.0.6'></script>
-    <script src='scripts.js' defer></script>
-    <link rel='stylesheet' href='style.css' />
-    {{! <meta name='CSRF-TOKEN' content='DYNAMIC_CSRF_TOKEN_HERE' /> }}
   </head>
 
-  {{! hx-headers='js:{"X-CSRF-TOKEN": document.querySelector(`meta[name="CSRF-TOKEN"]`).content}' }}
   <body>
     {{{body}}}
   </body>

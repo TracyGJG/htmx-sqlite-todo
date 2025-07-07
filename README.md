@@ -47,8 +47,7 @@ block-beta
     space:2
 
     Sq["SQLite"]
-    space:7
-    B["Browser"]
+    space:8
 
     space:2
     Hbs["handlebars"]
@@ -59,7 +58,8 @@ block-beta
     db[("Database")]
     space:3
     N["Node JS"]
-    space:4
+    space:3
+    B["Browser"]
 
     Sq --- db
     St --> Sq

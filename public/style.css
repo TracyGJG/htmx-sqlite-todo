@@ -2,12 +2,13 @@
   list-style: none;
   padding-inline-start: 0;
 }
-
 label {
   display: inline-block;
   width: 200px;
 }
-
 [checked] ~ label {
   text-decoration: line-through;
+}
+#todos-list button {
+  cursor: pointer;
 }

@@ -1,6 +1,6 @@
-<main>
+<main x-data>
   <h1>HTMX and SQLite demo</h1>
-  <h2>Supported by NodeJs, Express, Handlebars and Body Parser</h2>
+  <h2>Supported by NodeJs, Express, Handlebars and Body Parser.</h2>
   <h3>
     <span class='htmx-indicator'>
       <img src='/bars.svg' alt='Indicator bars' />
@@ -22,7 +22,6 @@
       placeholder='Title of new To Do'
       required
       autocomplete='off'
-      hx-on:keyup='controlAddTodoButton(event)'
     />
     <button type='submit' name='addButton'>Add To Do</button>
   </form>
