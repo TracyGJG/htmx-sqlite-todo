@@ -80,6 +80,7 @@ columns 14
         5[("&nbsp;Database&nbsp;")]
     end
 
+    B --> A
     Sq --> db
     db --> Sq
     St --> BS
@@ -105,11 +106,11 @@ columns 14
     style BP fill:#f70,color:#fff
     style Hbs fill:#f70,color:#fff
     style Ex fill:#f70,color:#fff
-    style 3 fill:#ff0
-    style H fill:#ff0
-    style 4 fill:#0f0
-    style St fill:#0f0
-    style R fill:#0f0
-    style V fill:#0f0
-    style A fill:#0f0
+    style 3 fill:#00f,color:#fff
+    style H fill:#00f,color:#fff
+    style 4 fill:#070,color:#fff
+    style St fill:#070,color:#fff
+    style R fill:#070,color:#fff
+    style V fill:#070,color:#fff
+    style A fill:#070,color:#fff
 ```
