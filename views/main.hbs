@@ -1,12 +1,5 @@
 <main x-data>
   <h1>HTMX and SQLite demo</h1>
-  <h2>Supported by NodeJs, Express, Handlebars and Body Parser.</h2>
-  <h3>
-    <span class='htmx-indicator'>
-      <img src='/bars.svg' alt='Indicator bars' />
-      Loading...
-    </span>
-  </h3>
 
   <form
     id='fmNewToDo'
@@ -34,4 +27,13 @@
     hx-trigger='load'
     hx-indicator='.htmx-indicator'
   ></ul>
+  <h3>
+    <span class='htmx-indicator'>
+      <img src='/bars.svg' alt='Indicator bars' />
+      Loading...
+    </span>
+  </h3>
+  <hr />
+  <h2>Supported by NodeJs, Express, Handlebars and Body Parser.</h2>
+
 </main>
